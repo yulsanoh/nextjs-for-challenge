@@ -1,11 +1,9 @@
 import Book from "../../components/books";
 import styles from "../../styles/home.module.css";
 
-export const API_URL = "https://books-api.nomadcoders.workers.dev/list";
-
 async function getBooks() {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
-  const response = await fetch(`${API_URL}s`);
+  const response = await fetch(`https://books-api.nomadcoders.workers.dev/lists`);
   const json = response.json();
   return json;
 }
